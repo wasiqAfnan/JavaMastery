@@ -1,0 +1,63 @@
+Step 1:- Install Jdk to your pc
+Step 2:- Now go to where you install jdk and then go to jdk->bin copy the path and goto advance System Setting-> Environment Variables -> system variables click on path then new and paste the copied path which you copy from jdk->bin
+Step 3:- Install mysql to your pc (chosse custom option under installation then choose latest server,latest workbench,latest shell and also you can get the jar file under mysql connectors option)
+Step 4:- Download mysql-connector.jar file of the same version as of your mysql version
+Step 5:- Copy the whole path along with name of the mysql-connector.jar
+Step 6:- Again go to advance System Setting-> Environment Variables -> user variable click new under variable name type 'classpath' and in variable value paste the path where you place your connector.jar file along with its name and extension
+Step 7:- now open cmd and type 'javap com.mysql.jdbc.Driver' hit enter. If you see 'class not found' then you have to be sure that you added class path properly. 
+         But if you see the following:
+
+         Compiled from "Driver.java"
+         public class com.mysql.jdbc.Driver extends com.mysql.cj.jdbc.Driver {
+         public com.mysql.jdbc.Driver() throws java.sql.SQLException;
+         static {};
+         }
+
+         it means you have succesfully added mysql drivers to your pc and your jdbc can connect to the database.
+step 8:- after this open vs code and create new java project then type the following and run the code:
+
+** make sure you have created the 'my-db' database in the mysql server before running the code
+
+import java.sql.*;
+public class jdbc_1_connection {
+    public static void main(String[] args) {
+        try{
+            /* Step 1 */
+            // loading jdbc sql drivers
+
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            /* Step 2 */
+            // setup url username and password
+
+            String url = "jdbc:mysql://localhost:3306/my_db";
+            String userName = "root";
+            String password = "root";
+
+            /* Step 3 */
+            // creating connenction to the database named my_db
+
+            Connection con = DriverManager.getConnection(url, userName, password);
+
+            /* Step 4 */
+            // checking connection has established or not.
+
+            if(con.isClosed()){
+                System.out.println("Connection failed");
+            }
+            else{
+                System.out.println("Connection Successful");
+            }
+
+            /* Step 5 */
+            // closing the connection.
+
+            con.close();
+
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+}
+
+if the output is successful then you have successfully connected to the server...woooaaahhh!!!!
