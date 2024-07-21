@@ -20,6 +20,8 @@ public class ResturantBillGenerationSystem {
     static int[] sum;
     static int total = 0;
     static int discount = 0;
+    static int totalDiscountPercent = 0;
+    static int totalDiscountAmt = 0;
     static int finalPrice = 0;
 
     public static void display() {
@@ -47,7 +49,7 @@ public class ResturantBillGenerationSystem {
         System.out.println("---------------------------------------------------------------------------");
 
         // print Total and discount
-        System.out.println(GREEN + "Total (Discount - " + discount + "/-): \t\t\t\t\t"+ finalPrice + "/-" + RESET);
+        System.out.println(GREEN + "Total (Discount - " + totalDiscountAmt + "/-): \t\t\t\t\t"+ finalPrice + "/-" + RESET);
         System.out.println("---------------------------------------------------------------------------");
 
         // greetings
@@ -81,11 +83,11 @@ public class ResturantBillGenerationSystem {
             // getting product price
             System.out.print(YELLOW + "Enter the product price per unit: " + RESET);
             productPrice[i] = sc.nextInt();
-
-            // getting discount
-            System.out.print(YELLOW + "Discount (if any in percentage): " + RESET);
-            discount = sc.nextInt();
         }
+        // getting discount
+        System.out.print(YELLOW + "Discount (if any in percentage): " + RESET);
+        discount = sc.nextInt();
+        
         calculate();
         display();
     }
@@ -95,11 +97,11 @@ public class ResturantBillGenerationSystem {
             total += productQuantity[i] * productPrice[i];
         }
 
-        if(discount > 0 ){
-            discount = (total * discount) / 100;          
+        if(discount > 0){
+            totalDiscountAmt = total * discount / 100;
         }
 
-        finalPrice = total - discount;
+        finalPrice = total - totalDiscountAmt;
     }
     public static void main(String[] args) throws Exception {
         userInput();
