@@ -25,15 +25,15 @@ public class ArrayList01 {
         ArrayList<String> fruits = new ArrayList<>();
 
         // Add elements to the ArrayList
-        fruits.add("Apple");
-        fruits.add("Banana");
-        fruits.add("Cherry");
-        fruits.add("Date");
+        fruits.add("Apple");// 0
+        fruits.add("Banana");// 1
+        fruits.add("Cherry");// 2
+        fruits.add("Date");// 3
 
         // Access and print elements from the ArrayList
         System.out.println("Fruits in the list:");
         for (String fruit : fruits) {
-            System.out.println(fruit);
+            System.out.println(fruit);// apple  banana  cherry date
         }
         
         // Alternative way to print the ArrayList
@@ -43,7 +43,6 @@ public class ArrayList01 {
         }
 
         // get and print index of an element
-        
         System.out.println("Index of Cherry is: "+fruits.indexOf("Cherry"));
 
 
