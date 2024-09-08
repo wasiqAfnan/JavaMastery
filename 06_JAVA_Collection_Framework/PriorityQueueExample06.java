@@ -107,7 +107,7 @@ over others.
 import java.util.PriorityQueue;
 import java.util.Iterator;
 
-public class PriorityQueueExample {
+public class PriorityQueueExample06 {
     public static void main(String[] args) {
         // Create a PriorityQueue of integers
         PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();

@@ -16,7 +16,7 @@
    - Also includes methods like `pollFirst()` and `pollLast()` to retrieve and remove the first and last elements of the set.
 
 4. **Performance**: 
-   - The `TreeSet` class is implemented using a `TreeMap`. Hence, the operations like add, remove, and search have a time complexity of O(log n).\
+   - The `TreeSet` class is implemented using a `TreeMap`. Hence, the operations like add, remove, and search have a time complexity of O(log n).
 
  */
 

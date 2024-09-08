@@ -13,8 +13,9 @@ public class oop03_Polymorphism_method_overloading {
         int rectArea = length * width;
         return rectArea;
     }
+
     public static void main(String[] args) {
-        //calling area with 2 parameters
+        //calling area with 1 parameters
         int result = area(5);
         System.out.println(result);
 

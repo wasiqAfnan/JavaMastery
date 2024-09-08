@@ -50,7 +50,6 @@ Queues are particularly useful in scenarios like:
 import java.util.LinkedList;
 import java.util.Queue;
 
-
 public class QueueUsingLinkedList05 {
     public static void main(String[] args) {
         // Create a Queue using LinkedList
