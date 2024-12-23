@@ -37,8 +37,8 @@ class Human{
 }
 public class oop04_construnctor {
     public static void main(String[] args) {
-        Human h1 = new Human(); // Non-Parameterized Constructor called
-        h1.show();
+         Human h1 = new Human(); // Non-Parameterized Constructor called
+         h1.show();
 
         Human h2 = new Human("wasiq",25); // Parameterized Constructor called
         h2.show();

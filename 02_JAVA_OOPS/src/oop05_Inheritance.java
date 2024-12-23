@@ -1,4 +1,4 @@
-// // Super Class or Parent class
+// Super Class or Parent class
 // class Employee{
 //     int id;
 //     String name;
@@ -44,19 +44,19 @@
 // Multilevel Inheritence
 
 // class Employee{
-//     void display(){
+//     public void display(){
 //         System.out.println("I am Display function under Employee class");
 //     }
 // }
 
 // class Engineer extends Employee{
-//     void show(){
+//     public void show(){
 //         System.out.println("I am show function under Engineer class");
 //     }
 // }
 
 // class SoftwareEngineer extends Engineer{
-//     void work(){
+//     public void work(){
 //         System.out.println("I am work function under SoftwareEngineer class");
 //     }
 // }
@@ -102,6 +102,3 @@
 //         mn.display();
 //     }
 // }
-
-
-
