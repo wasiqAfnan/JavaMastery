@@ -55,8 +55,8 @@ class Smartphone implements Power, Connenctivity {
 
 public class oop06_Interface {
     public static void main(String[] args) {
-        Smartphone phone = new Smartphone();
-        phone.powerOn();
+        Smartphone phone = new Smartphone(); // Created object of the phone class
+        phone.powerOn(); // Calling functions of interfaces
         phone.connect();
         phone.message();
         phone.disconnect();
