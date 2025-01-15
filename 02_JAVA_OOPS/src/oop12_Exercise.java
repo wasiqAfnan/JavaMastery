@@ -1,4 +1,5 @@
-// Write a Java program to create a class called Shape with a method called getArea(). Create a subclass called Rectangle that overrides the getArea() method to calculate the area of a rectangle.
+// Write a Java program to create a class called Shape with a method called getArea(). 
+// Create a subclass called Rectangle that overrides the getArea() method to calculate the area of a rectangle.
 
 class Shape{
     void getArea(){
@@ -14,7 +15,7 @@ class Rectangle extends Shape{
         this.length = len;
         this.breadth = bred;
     }
-
+// overriding getarea() methods
     @Override
     void getArea(){
         int area = length * breadth;
