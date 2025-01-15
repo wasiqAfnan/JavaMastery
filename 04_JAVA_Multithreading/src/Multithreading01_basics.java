@@ -10,8 +10,8 @@ class A extends Thread {
 class B extends Thread {
     @Override
     public void run() {
-        for (int i = 0; i <= 5; i++) {
-            System.out.println("j=" + i);
+        for (int j = 0; j <= 5; j++) {
+            System.out.println("j=" + j);
         }
     }
 }
@@ -19,8 +19,8 @@ class B extends Thread {
 class C extends Thread {
     @Override
     public void run() {
-        for (int i = 0; i <= 5; i++) {
-            System.out.println("k=" + i);
+        for (int k = 0; k <= 5; k++) {
+            System.out.println("k=" + k);
         }
     }
 }
