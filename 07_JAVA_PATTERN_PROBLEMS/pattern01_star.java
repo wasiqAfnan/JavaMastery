@@ -7,7 +7,7 @@
  *      *****
  */
 
- import java.util.Scanner;
+import java.util.Scanner;
 
 public class pattern01_star {
     public static void main(String[] args) {
