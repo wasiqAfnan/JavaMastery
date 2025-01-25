@@ -10,7 +10,7 @@
 
 import java.util.Scanner;
 
-public class pattern03_invertedStart {
+public class pattern03_invertedStar {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
