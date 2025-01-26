@@ -13,7 +13,7 @@
 
 import java.util.Scanner;
 
-public class pattern05_buuterflyPattern {
+public class pattern05_butterflyPattern {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
