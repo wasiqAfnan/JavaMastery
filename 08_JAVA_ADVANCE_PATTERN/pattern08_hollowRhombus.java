@@ -2,15 +2,15 @@
  * Problem: Write a program to print the following pattern.
  * 
  *          *****
- *         *****
- *        *****
- *       *****
+ *         *   *
+ *        *   *
+ *       *   *
  *      *****
  */
 
 import java.util.Scanner;
 
-public class pattern07_solidRhombus {
+public class pattern08_hollowRhombus {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
  
@@ -28,9 +28,14 @@ public class pattern07_solidRhombus {
 
             // for stars
             for(int j = 0; j < cols; j++){
-                System.out.print("*");
+                if(i == 0 || i == rows-1 || j == 0 || j == cols-1){
+                    System.out.print("*");
+                }
+                else{
+                    System.out.print(" ");
+                }
             }
             System.out.println();
-        }
+        }    
     }
 }
