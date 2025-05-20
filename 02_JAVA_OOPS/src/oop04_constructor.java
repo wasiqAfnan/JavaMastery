@@ -35,7 +35,7 @@ class Human{
         System.out.println("Age:"+age);
     }
 }
-public class oop04_construnctor {
+public class oop04_constructor {
     public static void main(String[] args) {
          Human h1 = new Human(); // Non-Parameterized Constructor called
          h1.show();
