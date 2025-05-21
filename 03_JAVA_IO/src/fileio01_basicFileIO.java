@@ -6,7 +6,7 @@ class fileio01_basicFileIO{
         // create an object of File class
         File myFile = new File("Files/myFile.txt");
         try{
-            // boolean res = myFile.createNewFile();
+            // boolean res = myFile.createNewFile(); // given either true or false value
             // System.out.println(res);
 
             // Creating a file
