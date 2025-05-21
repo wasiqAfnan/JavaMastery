@@ -31,6 +31,13 @@ public class ThreadNameExample {
         // Starting the threads
         thread1.start();
         thread2.start();
+        try {
+            thread1.join();
+            thread2.join();
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+        
 
         // Changing the name of thread2
         thread2.setName("CustomThread-2");

@@ -17,12 +17,11 @@ class MyMultithread0 extends Thread {
         for(int j=1;j<=5;j++){
             System.out.println("j="+j);
             if(j == 4){
-
                 try{
-                    sleep(1000);
+                    Thread.sleep(5000);
                 }
                 catch(Exception e){
-
+                    System.out.println(e.getMessage());
                 }
             }
         }
