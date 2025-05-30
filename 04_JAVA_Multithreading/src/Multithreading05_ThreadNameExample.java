@@ -6,7 +6,7 @@ class MyRunnable implements Runnable {
     }
 }
 
-public class ThreadNameExample {
+public class Multithreading05_ThreadNameExample {
     public static void main(String[] args) {
         /**
          * In Java multithreading, each thread is represented by an instance of the
