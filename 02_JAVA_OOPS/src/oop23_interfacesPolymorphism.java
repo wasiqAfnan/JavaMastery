@@ -13,12 +13,18 @@ interface Animal {
 }
 
 class Dog implements Animal {
+    @Override
     public void sound() {
         System.out.println("Dog barks.");
+    }
+
+    public void eat() {
+        System.out.println("Dog eats.");
     }
 }
 
 class Cat implements Animal {
+    @Override
     public void sound() {
         System.out.println("Cat meows.");
     }
@@ -30,6 +36,8 @@ public class oop23_interfacesPolymorphism {
 
         myAnimal = new Dog(); // object of Dog
         myAnimal.sound();     // calls Dog's implementation
+        // myAnimal.eat();     // calls Dog's implementation of eat function. But Animal ref
+        // do not resolve it. Hence, it gives error --> "Method eat undefined for type Animal"
 
         myAnimal = new Cat(); // now object of Cat
         myAnimal.sound();     // calls Cat's implementation
@@ -37,9 +45,9 @@ public class oop23_interfacesPolymorphism {
         /*
          * When you use an interface as a reference type, and assign an object 
          * of a class that implements that interface, Java allows you to only 
-         * access the methods defined in the interface (unless you cast it back).
+         * access the methods defined in the interface, Refer to line 39 in code. (unless you cast it back).
          * But at runtime, the actual method implementation in the class object 
-         * is executed.
+         * is executed. 
          */
     }
 }

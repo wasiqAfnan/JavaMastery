@@ -9,7 +9,7 @@
 //         System.out.println("this is play function");
 //     }
 //     public void play2(){
-//         System.out.println("this is play function");
+//         System.out.println("this is play2 function");
 //     }
 // }
 
