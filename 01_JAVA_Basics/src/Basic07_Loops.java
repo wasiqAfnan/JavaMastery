@@ -4,6 +4,7 @@ public class Basic07_Loops {
         // 1) For Loop
         // 2) While Loop
         // 3) Do-While Loop
+        // 4) For Loop but diferent Syntax
 
 
         // 1) For Loop
@@ -37,6 +38,12 @@ public class Basic07_Loops {
         //     System.out.println("Hello");
         //     i++;
         // } while(i < 5);
+
+        String name = "Wasiq Afnan";
+        char myName[] = name.toCharArray();
+        for(char c:myName){
+            System.out.println(c);
+        }
 
         //home work
         // 1) WAP to convert celsius to fahrenheit (9/5 x C) + 32

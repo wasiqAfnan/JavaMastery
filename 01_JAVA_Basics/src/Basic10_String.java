@@ -9,9 +9,9 @@ public class Basic10_String {
 
         // String functions
         String name = "wasiq";
-        String name2 = "Sohini";
+        String name2 = "Afnan";
         // System.out.println(name.charAt(0));// w
-        // System.out.println(name2.charAt(3));// i
+        // System.out.println(name2.charAt(3));// a
         // System.out.println(name.length()); // 5
         // System.out.println(name.indexOf('f'));// -1
         // System.out.println(name.indexOf('s'));// 2
@@ -25,6 +25,7 @@ public class Basic10_String {
         // System.out.println(name.contains("i"));
         // System.out.println(name.replace('q', 'z'));
         // System.out.println(name.equals("wsiq"));
-        System.out.println(name);
+        // System.out.println(name.toCharArray().getClass().getSimpleName()); // char[]
+        // System.out.println(name);
     }
 }

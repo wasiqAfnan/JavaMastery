@@ -9,11 +9,13 @@ public class Basic11_StringBuilder {
         sb.append(" World");                 // Hello World
         sb.insert(5, ", Java");              // Hello, Java World
         sb.replace(0, 5, "Hi");              // Hi, Java World
+        int capacity = sb.capacity();
         sb.delete(3, 9);                     // Hi World
         sb.reverse();                        // dlroW,iH
 
         System.out.println("Final: " + sb);  // dlroW,iH
         System.out.println("Length: " + sb.length()); // 8
         System.out.println("Char at index 2: " + sb.charAt(2)); // r
+        System.out.println("Char at index 2: " + capacity); // 21
     }
 }

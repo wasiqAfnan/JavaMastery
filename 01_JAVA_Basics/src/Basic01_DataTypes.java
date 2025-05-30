@@ -44,6 +44,5 @@ public class Basic01_DataTypes {
         // System.out.println(a);
         // System.out.println(b);
         // System.out.println(c);
-
     }
 }
