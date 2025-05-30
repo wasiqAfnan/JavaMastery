@@ -1,8 +1,5 @@
 // Class representing a thread-safe counter
 
-import java.io.RandomAccessFile;
-import java.util.Random;
-
 class Counter {
     int count = 0;
 
