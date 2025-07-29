@@ -1,8 +1,9 @@
 Revision programs.pdf
-05_JDBC/.vscode
-04_JAVA_Multithreading/.vscode
-03_JAVA_IO/.vscode
-02_JAVA_OOPS/.vscode
-01_JAVA_Basics/.vscode
+# 05_JDBC/.vscode
+# 04_JAVA_Multithreading/.vscode
+# 03_JAVA_IO/.vscode
+# 02_JAVA_OOPS/.vscode
+# 01_JAVA_Basics/.vscode
+/.vscode
 Projects/.vscode
 MyApplet/.vscode
