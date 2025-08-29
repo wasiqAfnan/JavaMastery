@@ -5,11 +5,14 @@ public class occuranceOfChar {
     public static void findOccurance(String s) {
         ArrayList<Integer> occurance = new ArrayList<>();
         ArrayList<Character> uniqueChar = new ArrayList<>();
+
         int count = 0;
         char[] str = s.toCharArray();
+
         for (int i = 0; i < s.length(); i++) {
             count = 1;
             char curr = str[i];
+
             if (uniqueChar.indexOf(curr) == -1) {
                 uniqueChar.add(curr);
                 for (int j = i + 1; j < s.length(); j++) {
@@ -17,9 +20,9 @@ public class occuranceOfChar {
                         count++;
                     }
                 }
+
                 occurance.add(count);
-            }
-            else{
+            } else {
                 continue;
             }
         }

@@ -5,8 +5,7 @@ public class linearSearch {
         }
     }
 
-    public static void linearSearchfn(int[] nums) {
-        int key = 90;  // the element we want to search
+    public static void linearSearchfn(int[] nums, int key) {
         boolean found = false;
 
         for (int i = 0; i < nums.length; i++) {
