@@ -20,23 +20,67 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Array03_maxSubarraySum {
-    public static void main(String[] args) {
+    // Brute Force Approach (O(n^3))
+    public static int bruteForceApproach(ArrayList<Integer> num) {
         int maxSum = Integer.MIN_VALUE;
         int currSum = 0;
-        ArrayList<Integer> num = new ArrayList<>();
-        num.addAll(Arrays.asList(1, 2, 3));
-
-        for(int i = 0; i < num.size(); i++){
-            for(int j = i; j < num.size(); j++){
+        for (int i = 0; i < num.size(); i++) {
+            for (int j = i; j < num.size(); j++) {
                 currSum = 0;
-                for(int k = i; k <= j; k++){
+                for (int k = i; k <= j; k++) {
                     currSum += num.get(k);
                 }
-                if(maxSum < currSum){
+                if (maxSum < currSum) {
                     maxSum = currSum;
                 }
             }
         }
+        return maxSum;
+    }
+
+    // Prefix Sum Approch (O(n^2))
+    public static int prefixSumApproach(ArrayList<Integer> num) {
+        ArrayList<Integer> prefix = new ArrayList<>();
+        int currSum = 0;
+        int maxSum = Integer.MIN_VALUE;
+
+        prefix.add(num.get(0));
+
+        for (int i = 1; i < num.size(); i++) {
+            prefix.add(prefix.get(i - 1) + num.get(i));
+        }
+
+        for (int i = 0; i < num.size(); i++) {
+            for (int j = i; j < num.size(); j++) {
+
+                if (i == 0) {
+                    currSum = prefix.get(j);
+                } else {
+                    currSum = prefix.get(j) - prefix.get(i - 1);
+                }
+
+                maxSum = Math.max(maxSum, currSum);
+            }
+        }
+
+        // System.out.println(prefix);
+        return maxSum;
+    }
+
+    // Kedan's Algo (O(n))
+    public static int kedanAlgo(ArrayList<Integer> num) {
+        
+        return 0;
+    }
+
+    public static void main(String[] args) {
+        ArrayList<Integer> num = new ArrayList<>();
+        num.addAll(Arrays.asList(1, 2, 3));
+
+        // int maxSum = bruteForceApproach(num);
+        int maxSum = prefixSumApproach(num);
+        // maxSum = kedanAlgo(num);
+
         System.out.println("Max Sub Array Sum: " + maxSum);
     }
 }
