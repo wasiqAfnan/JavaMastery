@@ -47,15 +47,18 @@ public class Array03_maxSubarraySum {
         prefix.add(num.get(0));
 
         for (int i = 1; i < num.size(); i++) {
-            prefix.add(prefix.get(i - 1) + num.get(i));
+            // prefix[i] = prefix[i-1] + arr[i]
+            prefix.add(prefix.get(i - 1) + num.get(i)); 
         }
 
         for (int i = 0; i < num.size(); i++) {
             for (int j = i; j < num.size(); j++) {
 
                 if (i == 0) {
+                    // currentSum = prefix[end]
                     currSum = prefix.get(j);
                 } else {
+                    // currentSum = prefix[end] - prefix[start-1]
                     currSum = prefix.get(j) - prefix.get(i - 1);
                 }
 
@@ -69,17 +72,46 @@ public class Array03_maxSubarraySum {
 
     // Kedan's Algo (O(n))
     public static int kedanAlgo(ArrayList<Integer> num) {
-        
-        return 0;
+        int currSum = 0;
+        int maxSum = Integer.MIN_VALUE;
+        boolean isNegative = true; // by default we assume that array is negative
+
+        // handling case where whole array is negative number
+        for (int i = 0; i < num.size(); i++) {
+            if (num.get(i) > 0) {
+                isNegative = false;
+            }
+        }
+
+        if (!isNegative) {
+            for (int i = 0; i < num.size(); i++) {
+                currSum = currSum + num.get(i);
+                if (currSum < 0) {
+                    currSum = 0;
+                }
+
+                maxSum = Math.max(maxSum, currSum);
+            }
+            return maxSum;
+        } else {
+            for(int i = 0; i < num.size(); i++){
+                // return the maxium number among all negative numbers
+                maxSum = Math.max(maxSum, num.get(i));
+            }
+            return maxSum;
+        }
+
     }
 
     public static void main(String[] args) {
         ArrayList<Integer> num = new ArrayList<>();
-        num.addAll(Arrays.asList(1, 2, 3));
+        // num.addAll(Arrays.asList(1, 2, 3));
+        num.addAll(Arrays.asList(1, -2, 3, -4, 5));
+        // num.addAll(Arrays.asList(-1, -2, -3, -4, -5));
 
         // int maxSum = bruteForceApproach(num);
-        int maxSum = prefixSumApproach(num);
-        // maxSum = kedanAlgo(num);
+        // int maxSum = prefixSumApproach(num);
+        int maxSum = kedanAlgo(num);
 
         System.out.println("Max Sub Array Sum: " + maxSum);
     }
