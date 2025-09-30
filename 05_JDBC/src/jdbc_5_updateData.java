@@ -8,7 +8,7 @@ public class jdbc_5_updateData {
 
             // setup url username and password
 
-            String url = "jdbc:mysql://localhost:3306/my_db";
+            String url = "jdbc:mysql://localhost:3406/my_db";
             String userName = "root";
             String password = "root";
 

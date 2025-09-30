@@ -1,6 +1,6 @@
 Step 1:- Install Jdk to your pc
 Step 2:- Now go to where you install jdk and then go to jdk->bin copy the path and goto advance System Setting-> Environment Variables -> system variables click on path then new and paste the copied path which you copy from jdk->bin
-Step 3:- Install mysql to your pc (chosse custom option under installation then choose latest server,latest workbench,latest shell and also you can get the jar file under mysql connectors option)
+Step 3:- Install mysql to your pc (choose custom option under installation then choose latest server,latest workbench, latest shell and also you can get the jar file under mysql connectors option)
 Step 4:- Download mysql-connector.jar file of the same version as of your mysql version
 Step 5:- Copy the whole path along with name of the mysql-connector.jar
 Step 6:- Again go to advance System Setting-> Environment Variables -> user variable click new under variable name type 'classpath' and in variable value paste the path where you place your connector.jar file along with its name and extension
@@ -14,7 +14,15 @@ Step 7:- now open cmd and type 'javap com.mysql.jdbc.Driver' hit enter. If you s
          }
 
          it means you have succesfully added mysql drivers to your pc and your jdbc can connect to the database.
-step 8:- after this open vs code and create new java project then type the following and run the code:
+step 8: IMPORTANT: Verify MySQL port before setting the URL.
+        Default is 3306, but it can differ (e.g., 3406).
+        To check the port being used:
+            Path => C:\ProgramData\MySQL\MySQL Server 8.4\my.ini
+            1. Open MySQL config file (my.ini) → look for "port="
+            2. Or run in terminal: netstat -ano | findstr mysqld
+            3. Or check MySQL Workbench → "Server Status"
+        Make sure the port here matches the actual MySQL port.
+step 9:- after this open vs code and create new java project then type the following and run the code:
 
 ** make sure you have created the 'my-db' database in the mysql server before running the code
 

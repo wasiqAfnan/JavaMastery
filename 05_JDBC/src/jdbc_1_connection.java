@@ -1,8 +1,9 @@
 import java.sql.*;
 import javax.swing.*;
+
 public class jdbc_1_connection {
     public static void main(String[] args) {
-        try{
+        try {
             /* Step 1 */
             // loading jdbc sql drivers
 
@@ -11,7 +12,16 @@ public class jdbc_1_connection {
             /* Step 2 */
             // setup url username and password
 
-            String url = "jdbc:mysql://localhost:3306/my_db";
+            // IMPORTANT: Verify MySQL port before setting the URL.
+            // Default is 3306, but it can differ (e.g., 3406).
+            // To check the port being used:
+            // Path => C:\ProgramData\MySQL\MySQL Server 8.4\my.ini
+            // 1. Open MySQL config file (my.ini) → look for "port="
+            // 2. Or run in terminal: netstat -ano | findstr mysqld
+            // 3. Or check MySQL Workbench → "Server Status"
+            // Make sure the port here matches the actual MySQL port.
+
+            String url = "jdbc:mysql://localhost:3406/my_db";
             String userName = "root";
             String password = "root";
 
@@ -23,11 +33,10 @@ public class jdbc_1_connection {
             /* Step 4 */
             // checking connection has established or not.
 
-            if(con.isClosed()){
+            if (con.isClosed()) {
                 System.out.println("Connection failed");
                 JOptionPane.showMessageDialog(null, "Connection Successful", "Message", JOptionPane.ERROR_MESSAGE);
-            }
-            else{
+            } else {
                 System.out.println("Connection Successful");
                 JOptionPane.showMessageDialog(null, "Connection Successful", "Message", 1);
             }
@@ -37,7 +46,7 @@ public class jdbc_1_connection {
 
             con.close();
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
