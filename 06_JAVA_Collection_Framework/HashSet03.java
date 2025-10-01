@@ -1,18 +1,19 @@
 /*
-    HashSet is a part of the Java Collection Framework and implements the Set interface. 
-    It is backed by a hash table. 
+    HashSet is a part of the Java Collection Framework and implements the Set 
+    interface. It is backed by a hash table.
+
     Here are some key points about HashSet:
-    
     Unique Elements: Stores unique elements and does not allow duplicates.
     
     No Order Guarantee: Does not guarantee any specific order of elements.
     
-    Hashing: Uses hash codes for storing elements, providing constant-time performance for basic 
-    operations like add, remove, and contains.
+    Hashing: Uses hash codes for storing elements, providing constant-time 
+    performance for basic operations like add, remove, and contains.
     
     Null Element: Allows one null element.
     
-    Usage: Ideal for scenarios where you need a collection of unique elements and don't care about the order of elements.
+    Usage: Ideal for scenarios where you need a collection of unique elements and
+    don't care about the order of elements.
 */
 import java.util.HashSet;
 
