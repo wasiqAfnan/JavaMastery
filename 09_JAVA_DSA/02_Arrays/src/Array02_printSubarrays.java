@@ -21,17 +21,35 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Array02_printSubarrays {
-    public static void main(String[] args) {
-        ArrayList<Integer> num = new ArrayList<>();
-        num.addAll(Arrays.asList(1, 2, 3));
-
-        for(int i = 0; i < num.size(); i++){
-            for(int j = i; j < num.size(); j++){
-                for(int k = i; k <= j; k++){
+    // Brute force O(n^3)
+    public static void bruteForceApproach(ArrayList<Integer> num) {
+        for (int i = 0; i < num.size(); i++) {
+            for (int j = i; j < num.size(); j++) {
+                for (int k = i; k <= j; k++) {
                     System.out.print(num.get(k) + " ");
                 }
                 System.out.println();
             }
         }
+    }
+
+    // optimized Approach O(n^2)
+    public static void optimizedApproach(ArrayList<Integer> num) {
+        for (int i = 0; i < num.size(); i++) {
+            // craeting new array for storing sub array in each iteration
+            ArrayList<Integer> subArr = new ArrayList<>();
+            for (int j = i; j < num.size(); j++) {
+                // adding new element in each iteration
+                subArr.add(num.get(j));
+                System.out.println(subArr); // printing growing subarrays
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        ArrayList<Integer> num = new ArrayList<>();
+        num.addAll(Arrays.asList(1, 2, 3));
+        // bruteForceApproach(num);
+        optimizedApproach(num);
     }
 }
