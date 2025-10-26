@@ -19,7 +19,7 @@ public class jdbc_2_createTable {
 
             // setup url username and password
 
-            String url = "jdbc:mysql://localhost:3406/my_db";
+            String url = "jdbc:mysql://localhost:3406/records";
             String userName = "root";
             String password = "root";
 
@@ -37,7 +37,7 @@ public class jdbc_2_createTable {
 
             // preparing sql query
 
-            String query = "Create table my_table (slno int(20) primary key auto_increment,name varchar(30) not null,city varchar(20) not null)";
+            String query = "Create table courses (course_id int primary key auto_increment,course_name varchar(30) not null,course_instructor varchar(20) not null);";
 
             // craeting a statement
 
@@ -54,7 +54,7 @@ public class jdbc_2_createTable {
 
             stmt.executeUpdate(query);
 
-            System.out.println("Query executed successful");
+            System.out.println("Query executed successfully");
 
             // closing the connection.
 
