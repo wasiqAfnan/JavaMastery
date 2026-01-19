@@ -8,7 +8,7 @@ public class jdbc_6_showData {
 
             // setup url username and password
 
-            String url = "jdbc:mysql://localhost:3406/my_db";
+            String url = "jdbc:mysql://localhost:3406/records";
             String userName = "root";
             String password = "root";
 
@@ -26,7 +26,7 @@ public class jdbc_6_showData {
 
             // preparing query
 
-            String query = "select * from my_table";
+            String query = "select * from students";
 
             // creating statement 
 
@@ -39,9 +39,9 @@ public class jdbc_6_showData {
             // fetching records from result set
 
             while(rs.next()){
-                int id = rs.getInt("slno"); // fetching slno from resultset
-                String name = rs.getString("name"); // fetching name from resultset
-                String city = rs.getString("city"); // fetching city from resultset
+                int id = rs.getInt("student_id"); // fetching slno from resultset
+                String name = rs.getString("student_name"); // fetching name from resultset
+                String city = rs.getString("student_address"); // fetching city from resultset
 
                 System.out.println("Student id = " + id + " | " + "Student name = " + name + " | " + "Student city = " + city ); // printing in terminal
             }

@@ -8,7 +8,7 @@ public class jdbc_3_insertData {
 
             // setup url username and password
 
-            String url = "jdbc:mysql://localhost:3406/my_db";
+            String url = "jdbc:mysql://localhost:3406/records";
             String userName = "root";
             String password = "root";
 
@@ -27,7 +27,7 @@ public class jdbc_3_insertData {
 
             // preparing sql query
 
-            String query = "insert into my_table(name,city) VALUES (?,?)";
+            String query = "insert into students(student_name,student_address) VALUES (?,?)";
 
             //craeting a statement
 
@@ -35,8 +35,8 @@ public class jdbc_3_insertData {
 
             // setup values
 
-            pstmt.setString(1, "wasiq");
-            pstmt.setString(2, "kolkata");
+            pstmt.setString(1, "Bikash");
+            pstmt.setString(2, "Mumbai");
 
             // executing query
 
